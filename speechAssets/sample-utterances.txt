@@ -1,0 +1,16 @@
+GetNextPost for the latest post
+GetNextPost for the latest audio post
+GetNextPost for the newest post
+GetNextPost for the newest audio post
+GetNextPost for the latest article
+GetNextPost for the latest audio article
+GetNextPost for the latest blog article
+GetNextPost for the latest audio blog article
+GetNextPost for the latest blog post
+GetNextPost for the latest audio blog post
+GetNextPost for the newest article
+GetNextPost for the newest audio article
+GetNextPost for the newest blog article
+GetNextPost for the newest audio blog article
+GetNextPost for the newest blog post
+GetNextPost for the newest audio blog post
