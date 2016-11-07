@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "intent": "GetNextPost",
+      "slots": [
+        {
+          "name": "postNum",
+          "type": "AMAZON.NUMBER"
+        }
+      ]
+    },
+    {
+      "intent": "AMAZON.StopIntent"
+    },
+    {
+      "intent": "AMAZON.CancelIntent"
+    },
+    {
+      "intent": "AMAZON.HelpIntent"
+    }
+  ]
+}
