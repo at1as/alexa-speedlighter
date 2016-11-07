@@ -45,8 +45,8 @@ def get_verbal_text_string(input_text):
   return clean_text
 
 def remove_url_paths(input_text):
-  # Strip everything except base URL : https://www.speedlighter.ca/path/to/resource => www.speedlighter.ca
-  try:    return re.sub("(https?://|www.)(?P<url>[^\/]+)/?[^\s]+", "\\2", input_text)
+  # Strip everything except base URL : https://www.speedlighter.ca/path/to/resource => speedlighter.ca
+  try:    return re.sub("(https?://|www.|https?://www.)(?P<url>[^\/^\?]+)[^\s]*", "\\g<url>", input_text)
   except: return input_text
 
 def replace_unpronounceable_chars(input_string):
