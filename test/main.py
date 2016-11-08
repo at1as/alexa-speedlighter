@@ -4,6 +4,10 @@ import unittest
 
 class TestStringMethods(unittest.TestCase):
 
+  def bracket_text(self, text_string):
+    return "begin " + text_string + " end."
+
+
   def test_removing_url_data(self):
     trailing_chars  = ['www.google.com', 'www.google.com/', 'www.google.com?']
     nested_resource = ['www.google.com/abc', 'www.google.com/abc?page=1', 'www.google.com/abc/def', 'www.google.com/abc/def/']
@@ -12,19 +16,19 @@ class TestStringMethods(unittest.TestCase):
     http_urls       = ['https://google.com/abc/def?xyz=123', 'http://google.com/abc/def?xyz=123']
 
     for url in trailing_chars:
-      self.assertEqual(xml_parser.remove_url_paths(url), 'google.com')
+      self.assertEqual(self.bracket_text(xml_parser.remove_url_paths(url)), 'begin google.com end.')
     
     for url in nested_resource:
-      self.assertEqual(xml_parser.remove_url_paths(url), 'google.com')
+      self.assertEqual(self.bracket_text(xml_parser.remove_url_paths(url)), 'begin google.com end.')
     
     for url in query_params:
-      self.assertEqual(xml_parser.remove_url_paths(url), 'google.com')
+      self.assertEqual(self.bracket_text(xml_parser.remove_url_paths(url)), 'begin google.com end.')
     
     for url in http_www_urls:
-      self.assertEqual(xml_parser.remove_url_paths(url), 'www.google.com')
+      self.assertEqual(self.bracket_text(xml_parser.remove_url_paths(url)), 'begin www.google.com end.')
 
     for url in http_urls:
-      self.assertEqual(xml_parser.remove_url_paths(url), 'google.com')
+      self.assertEqual(self.bracket_text(xml_parser.remove_url_paths(url)), 'begin google.com end.')
 
 
   def test_replace_unpronounceable_chars(self):
