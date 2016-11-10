@@ -71,7 +71,10 @@ def get_recent_posts(intent, session):
   except:
     desired_responses = 1
 
-  responses     = xml_parser.get_extracted_text(min(desired_responses, 5))
+  # Maximum 4 responses returned
+  desired_responses = 4 if desired_responses > 4 else desired_responses
+  
+  responses     = xml_parser.get_extracted_text(desired_responses)
   response_body = ''
 
   print('Attempting to fetch {} responses'.format(str(desired_responses)))
