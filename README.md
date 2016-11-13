@@ -1,10 +1,13 @@
 # Speedlighter
 
-`Status: Has been submitted for certification. Awaiting result`
-
 Alexa skill for reading entries from my Father's [Photography Blog](http://www.speedlighter.ca/).
 
 Parses [RSS feed](http://www.speedlighter.ca/feed/) for posts in the `Audible` category and reads them out.
+
+
+### Status
+
+Available as an Alexa [Skill in the US](https://www.amazon.com/s/ref=nb_sb_noss/163-7867705-1788348?url=search-alias%3Dalexa-skills&field-keywords=speedlighter)
 
 
 ### Usage
